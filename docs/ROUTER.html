@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>项目目录介绍 · GitBook</title>
+        <title>路由设置 · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -57,10 +57,8 @@
     <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="COMMONJS.html" />
     
-    
-    <link rel="prev" href="./" />
+    <link rel="prev" href="COMPONENTS.html" />
     
 
     </head>
@@ -102,7 +100,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.2" data-path="CATALOG.html">
+        <li class="chapter " data-level="1.2" data-path="CATALOG.html">
             
                 <a href="CATALOG.html">
             
@@ -141,7 +139,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5" data-path="ROUTER.html">
+        <li class="chapter active" data-level="1.5" data-path="ROUTER.html">
             
                 <a href="ROUTER.html">
             
@@ -184,7 +182,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="." >项目目录介绍</a>
+        <a href="." >路由设置</a>
     </h1>
 </div>
 
@@ -199,8 +197,38 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h2 id="&#x9879;&#x76EE;&#x76EE;&#x5F55;&#x4ECB;&#x7ECD;">&#x9879;&#x76EE;&#x76EE;&#x5F55;&#x4ECB;&#x7ECD;</h2>
-<p><img src="images/projectdoc.png" alt="&#x9879;&#x76EE;&#x76EE;&#x5F55;&#x4ECB;&#x7ECD;"></p>
+                                <h1 id="&#x8DEF;&#x7531;&#x8BBE;&#x7F6E;">&#x8DEF;&#x7531;&#x8BBE;&#x7F6E;</h1>
+<h2 id="&#x76EE;&#x5F55;&#x4F4D;&#x7F6E;srcrouterroutersjs">&#x76EE;&#x5F55;&#x4F4D;&#x7F6E;(src/router/routers.js)</h2>
+<h3 id="&#x6DFB;&#x52A0;&#x4E00;&#x4E2A;&#x65B0;&#x8DEF;&#x7531;">&#x6DFB;&#x52A0;&#x4E00;&#x4E2A;&#x65B0;&#x8DEF;&#x7531;</h3>
+<pre><code class="lang-script">  export default [
+    {
+      path: &apos;/&apos;,
+      name: &apos;Index&apos;,
+      component: () =&gt; import(&apos;@/components/index&apos;),
+      meta: {
+        title: &apos;&#x9996;&#x9875;&apos;,
+        noCheckRule: true
+      }
+    },
+    {
+      path: &apos;/new&apos;,     // &#x8DEF;&#x7531;&#x8BBF;&#x95EE;path
+      name: &apos;Index&apos;,    // &#x8DEF;&#x7531;&#x540D;&#x79F0; &#x552F;&#x4E00;&#x6027;  &#x83DC;&#x5355;&#x6743;&#x9650;&#x914D;&#x7F6E;&#x91CC;&#x9762;&#x524D;&#x7AEF;&#x8DEF;&#x7531;&#x540D;&#x79F0;&#x5C31;&#x662F;&#x8FD9;&#x4E2A;&#x5B57;&#x6BB5;
+      component: () =&gt; import(&apos;@/components/new.vue&apos;),   // &#x5BF9;&#x5E94;&#x7684;.vue&#x6587;&#x4EF6;
+      meta: {              // &#x4E00;&#x4E9B;&#x5176;&#x4ED6;&#x7684;&#x4FE1;&#x606F;
+        title: &apos;&#x65B0;&#x8DEF;&#x7531;&apos;,   // &#x8DEF;&#x7531;&#x663E;&#x793A;&#x5728;&#x7F51;&#x9875;title&#x4E0A;&#x7684;&#x540D;&#x79F0;&#x4EE5;&#x53CA;&#x9762;&#x5305;&#x5C51;&#x7684;&#x540D;&#x79F0;
+        noCheckRule: true,  //&#x4E0D;&#x68C0;&#x67E5;&#x9875;&#x9762;&#x6743;&#x9650;&#x7684;&#x9875;&#x9762;
+        fullScreen: true,   //&#x6CA1;&#x6709;&#x5934;&#x90E8;&#x5DE6;&#x4FA7;&#x83DC;&#x5355;&#x7684;&#x9875;&#x9762;
+        noLogin:true,   //&#x4E0D;&#x9700;&#x8981;&#x767B;&#x5F55;&#x7684;&#x9875;&#x9762;
+        breadcrumb: [   // &#x5982;&#x679C;&#x6B64;&#x8DEF;&#x7531;&#x4E0D;&#x5728;&#x5DE6;&#x4FA7;&#x83DC;&#x5355;&#x4E0A; &#x4F46;&#x662F;&#x53C8;&#x8981;&#x9AD8;&#x4EAE;&#x4E00;&#x4E2A;&#x83DC;&#x5355; &#x914D;&#x7F6E;&#x6B64;&#x9009;&#x9879;&#xFF0C;&#x8FD9;&#x79CD;&#x60C5;&#x51B5;&#x8FDB;&#x5165;&#x8FD9;&#x4E2A;&#x8DEF;&#x7531;&#xFF0C;&#x5DE6;&#x4FA7;&#x7528;&#x6237;&#x7BA1;&#x7406;&#x83DC;&#x5355;&#x9AD8;&#x4EAE;
+          {
+            name: &apos;&#x7528;&#x6237;&#x7BA1;&#x7406;&apos;,
+            url: &apos;/user&apos;
+          }
+        ]
+      }
+    }
+  ]
+</code></pre>
 
                                 
                                 </section>
@@ -228,14 +256,10 @@
 
             
                 
-                <a href="./" class="navigation navigation-prev " aria-label="Previous page: 项目介绍">
+                <a href="COMPONENTS.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: 公共组件">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
-                
-                <a href="COMMONJS.html" class="navigation navigation-next " aria-label="Next page: 公共方法">
-                    <i class="fa fa-angle-right"></i>
-                </a>
                 
             
         
@@ -244,7 +268,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"项目目录介绍","level":"1.2","depth":1,"next":{"title":"公共方法","level":"1.3","depth":1,"path":"COMMONJS.md","ref":"COMMONJS.md","articles":[]},"previous":{"title":"项目介绍","level":"1.1","depth":1,"path":"README.md","ref":"README.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"CATALOG.md","mtime":"2019-07-10T06:53:31.235Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-07-10T08:42:53.182Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"路由设置","level":"1.5","depth":1,"previous":{"title":"公共组件","level":"1.4","depth":1,"path":"COMPONENTS.md","ref":"COMPONENTS.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"ROUTER.md","mtime":"2019-07-10T07:37:40.091Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-07-10T09:19:50.032Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>
@@ -252,10 +276,6 @@
         
     <script src="gitbook/gitbook.js"></script>
     <script src="gitbook/theme.js"></script>
-    
-        
-        <script src="gitbook/gitbook-plugin-livereload/plugin.js"></script>
-        
     
         
         <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
