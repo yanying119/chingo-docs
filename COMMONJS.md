@@ -307,3 +307,24 @@ const md5 = this.commonMethods.MD5().toString();
 // 是否有登录权限
 const havaLogin = this.commonMethods.hasHanderRule('routeName');
 ```
+
+### 二十、antiShake
+
+> 功能：防抖，使用在连续触发多次的情况，比如 input 搜索关键字 关键字改变的时候。监听滚动条下拉的时候
+
+> 参数：callback 回调函数 timer 事件触发间隔， 两次触发间隔小于这个值 只会触发一次
+
+> 返回值：一个方法
+
+**用例：**
+
+```javascript
+// 是否有登录权限
+const havaLogin = this.commonMethods.antiShake((query) => {
+  //do something
+  console.log(query)
+},1000);
+
+// 当输入框的值改变时  多次触发 只会执行最后一次
+<input @change="havaLogin" />
+```
