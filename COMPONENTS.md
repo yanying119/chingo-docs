@@ -61,3 +61,112 @@
   }
 </script>
 ```
+
+#### 三、模态框
+
+> 功能：全局模态框，用于弹出一些提示信息。
+
+> 参数：一个对象 {show: false, title: '系统提示', content: '', onOk: function() { return false;}}
+
+**用例：**
+
+```javascript
+<template></template>
+<script>
+  export default {
+    data(){
+      return {}
+    },
+    methods:{
+      openModal(){
+        this.$store.commit("setModal",{
+          // 模态框显示与否  false 关闭 true 显示
+          show: false,
+          // 模态框的头部文字
+          title: '系统提示',
+          // 提示的内容
+          content: '',
+          onOk: ()=>{
+            // 点击确定按钮所执行的事件
+          }
+        })
+      }
+    }
+  }
+</script>
+```
+
+#### 四、加载中
+
+> 功能：显示一个加载状态。
+
+> 参数： ture or false
+
+**用例：**
+
+```javascript
+<template></template>
+<script>
+  export default {
+    data(){
+      return {}
+    },
+    methods:{
+      handler(){
+        // 显示加载中
+        this.$store.commit("setLoading",true)
+        // 关闭加载中
+        this.$store.commit("setLoading",false)
+      }
+    }
+  }
+</script>
+```
+
+#### 五、列表搜索框组件
+
+> 功能：用于列表搜索条件太多时，可以点击展开搜索条件。
+
+> props：show true or false， setShow 父级控制搜索框显示隐藏的事件
+
+> slot : left 显示在控制按钮左侧的内容，right 显示最右侧的内容
+
+> **用例：**
+
+```javascript
+<template>
+<Layout>
+  <Content>
+    <Card>
+      <Search :show="show" :setShow="setShow">
+        <Button slot="left">显示在左边</Button>
+        <Button slot="right">显示在右边</Button>
+        <!--这里填写其他的搜索条件-->
+        <From>
+          <FormItem>
+            <Input v-modal="keywords"/>
+          </FormItem>
+        </Form>
+      </Search>
+      <!--下面是列表-->
+    </Card>
+  </Content>
+</Layout>
+</template>
+<script>
+  import Search from '../common/search.vue';
+  export default {
+    data(){
+      return {
+        show:false
+      }
+    },
+    components:{Search},
+    methods:{
+      setShow(bool){
+        this.show = bool
+      }
+    }
+  }
+</script>
+```
