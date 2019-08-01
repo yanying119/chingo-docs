@@ -201,7 +201,7 @@
                                 
                                 <h2 id="&#x516C;&#x5171;&#x7EC4;&#x4EF6;">&#x516C;&#x5171;&#x7EC4;&#x4EF6;</h2>
 <h3 id="&#x76EE;&#x5F55;&#x4F4D;&#x7F6E;&#xFF08;srccomponentscommon&#xFF09;">&#x76EE;&#x5F55;&#x4F4D;&#x7F6E;&#xFF08;src/components/common&#xFF09;</h3>
-<h4 id="&#x4E00;&#x3001;&#x9AD8;&#x5FB7;&#x5730;&#x56FE;">&#x4E00;&#x3001;&#x9AD8;&#x5FB7;&#x5730;&#x56FE;</h4>
+<h4 id="&#x4E00;&#x3001;&#x9AD8;&#x5FB7;&#x5730;&#x56FE;-map">&#x4E00;&#x3001;&#x9AD8;&#x5FB7;&#x5730;&#x56FE; Map</h4>
 <blockquote>
 <p>&#x529F;&#x80FD;&#xFF1A;&#x5F15;&#x5165;&#x9AD8;&#x5FB7;&#x5730;&#x56FE;</p>
 <p>props&#xFF1A; element-id &#x5730;&#x56FE;&#x7684; id(&#x975E;)&#xFF0C; coordinate &#x5730;&#x56FE;&#x4E2D;&#x5FC3;&#x70B9;&#x5750;&#x6807;(&#x975E;) &#xFF0C;readonly &#x662F;&#x5426;&#x53EA;&#x8BFB; &#x9ED8;&#x8BA4; false(&#x975E;)</p>
@@ -215,15 +215,15 @@
   import Map from &apos;../common/map.vue&apos;;
   export default {
     components:{Map},
-  },
-  methods:{
-    setCoordinate(lng, lat){
-      console.log(lng, lat)
+    methods:{
+      setCoordinate(lng, lat){
+        console.log(lng, lat)
+      }
     }
   }
 &lt;/script&gt;
 </code></pre>
-<h4 id="&#x4E8C;&#x3001;&#x767E;&#x5EA6;&#x7F16;&#x8F91;&#x5668;">&#x4E8C;&#x3001;&#x767E;&#x5EA6;&#x7F16;&#x8F91;&#x5668;</h4>
+<h4 id="&#x4E8C;&#x3001;&#x767E;&#x5EA6;&#x7F16;&#x8F91;&#x5668;-ue">&#x4E8C;&#x3001;&#x767E;&#x5EA6;&#x7F16;&#x8F91;&#x5668; UE</h4>
 <blockquote>
 <p>&#x529F;&#x80FD;&#xFF1A;&#x5F15;&#x5165;&#x9AD8;&#x5FB7;&#x5730;&#x56FE;</p>
 <p>props&#xFF1A;element-id &#x7F16;&#x8F91;&#x5668;&#x7684; id(&#x975E;)&#xFF0C; content &#x7F16;&#x8F91;&#x5668;&#x5185;&#x5BB9;(&#x5FC5;&#x586B;)&#xFF0C; ueConfig &#x7F16;&#x8F91;&#x5668;&#x914D;&#x7F6E;(&#x975E;)</p>
@@ -304,7 +304,7 @@
   }
 &lt;/script&gt;
 </code></pre>
-<h4 id="&#x4E94;&#x3001;&#x5217;&#x8868;&#x641C;&#x7D22;&#x6846;&#x7EC4;&#x4EF6;">&#x4E94;&#x3001;&#x5217;&#x8868;&#x641C;&#x7D22;&#x6846;&#x7EC4;&#x4EF6;</h4>
+<h4 id="&#x4E94;&#x3001;&#x5217;&#x8868;&#x641C;&#x7D22;&#x6846;&#x7EC4;&#x4EF6;-seacher">&#x4E94;&#x3001;&#x5217;&#x8868;&#x641C;&#x7D22;&#x6846;&#x7EC4;&#x4EF6; Seacher</h4>
 <blockquote>
 <p>&#x529F;&#x80FD;&#xFF1A;&#x7528;&#x4E8E;&#x5217;&#x8868;&#x641C;&#x7D22;&#x6761;&#x4EF6;&#x592A;&#x591A;&#x65F6;&#xFF0C;&#x53EF;&#x4EE5;&#x70B9;&#x51FB;&#x5C55;&#x5F00;&#x641C;&#x7D22;&#x6761;&#x4EF6;&#x3002;</p>
 <p>props&#xFF1A;show true or false&#xFF0C; setShow &#x7236;&#x7EA7;&#x63A7;&#x5236;&#x641C;&#x7D22;&#x6846;&#x663E;&#x793A;&#x9690;&#x85CF;&#x7684;&#x4E8B;&#x4EF6;</p>
@@ -346,6 +346,49 @@
     }
   }
 &lt;/script&gt;
+</code></pre>
+<h4 id="&#x516D;&#x3001;&#x6743;&#x9650;&#x70B9;&#x6309;&#x94AE;-list-button">&#x516D;&#x3001;&#x6743;&#x9650;&#x70B9;&#x6309;&#x94AE; list-button</h4>
+<blockquote>
+<p>&#x529F;&#x80FD;&#xFF1A;&#x7528;&#x4E8E;&#x653E;&#x7F6E;&#x5E26;&#x6709;&#x6743;&#x9650;&#x5224;&#x65AD;&#x7684;&#x64CD;&#x4F5C;&#x6309;&#x94AE;&#x6216;&#x8005;&#x94FE;&#x63A5;&#x3002;</p>
+<p>props&#xFF1A;rule [String]&#x5BF9;&#x5E94;&#x7684;&#x6743;&#x9650;&#x70B9; routeName&#xFF0C;usable[Boolean] &#x662F;&#x53EF;&#x7528;&#x72B6;&#x6001; &#x8FD8;&#x662F;&#x7981;&#x7528;&#x72B6;&#x6001; true or false&#xFF0C;to &#x94FE;&#x63A5;&#x5730;&#x5740;&#x540C; router-link &#x7684;&#x5C5E;&#x6027; to</p>
+<p>slot : &#x6807;&#x7B7E;&#x4E4B;&#x95F4;&#x7684;&#x5185;&#x5BB9; &#x64CD;&#x4F5C;&#x662F;&#x663E;&#x793A;&#x6309;&#x94AE;&#x8FD8;&#x662F;&#x94FE;&#x63A5; &#x6216;&#x8005;&#x4E00;&#x53E5;&#x8BDD;&#xFF08;&#x5408;&#x6CD5;&#x7684; html&#xFF09;</p>
+<p>&#x4E8B;&#x4EF6; : on-click &#x70B9;&#x51FB;&#x4E8B;&#x4EF6; &#x6709; to &#x7684;&#x60C5;&#x51B5;&#x5148;&#x6267;&#x884C; to &#x8DF3;&#x8F6C;</p>
+<p><strong>&#x7528;&#x4F8B;&#xFF1A;</strong></p>
+</blockquote>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
+  <span class="hljs-comment">&lt;!-- &#x64CD;&#x4F5C;&#x94FE;&#x63A5; --&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">list-button</span> <span class="hljs-attr">rule</span>=<span class="hljs-string">&quot;xxx&quot;</span> <span class="hljs-attr">:usable</span>=<span class="hljs-string">&quot;a==b&quot;</span> <span class="hljs-attr">:to</span>=<span class="hljs-string">&quot;{name:&apos;xxx&apos;}&quot;</span>&gt;</span>&#x540D;&#x79F0;<span class="hljs-tag">&lt;/<span class="hljs-name">list-button</span>&gt;</span>
+  <span class="hljs-comment">&lt;!-- &#x64CD;&#x4F5C;&#x6309;&#x94AE; --&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">list-button</span> <span class="hljs-attr">rule</span>=<span class="hljs-string">&quot;xxx&quot;</span> <span class="hljs-attr">:usable</span>=<span class="hljs-string">&quot;a==b&quot;</span> @<span class="hljs-attr">on-click</span>=<span class="hljs-string">&quot;doSomething&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;primary&quot;</span>&gt;</span>&#x6309;&#x94AE;&#x540D;&#x79F0;<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">list-button</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">template</span>&gt;</span>
+</code></pre>
+<h4 id="&#x4E0A;&#x4F20;&#x6587;&#x4EF6;-upload-file">&#x4E0A;&#x4F20;&#x6587;&#x4EF6; upload-file</h4>
+<blockquote>
+<p>&#x529F;&#x80FD;&#xFF1A;&#x7528;&#x4E8E;&#x4E0A;&#x4F20;&#x6587;&#x4EF6;&#x6216;&#x8005;&#x56FE;&#x7247;</p>
+<p>props&#xFF1A;files[Array,Object] &#x8981;&#x4E0A;&#x4F20;&#x7684;&#x6587;&#x4EF6;&#xFF0C;isImage[Boolean] true &#x4E0A;&#x4F20;&#x56FE;&#x7247; false &#x4E0A;&#x4F20;&#x6587;&#x4EF6;</p>
+<p>&#x4E8B;&#x4EF6; : on-success &#x6587;&#x4EF6;&#x4E0A;&#x4F20;&#x6210;&#x529F;&#x7684;&#x94A9;&#x5B50;&#xFF0C;on-delete &#x56FE;&#x7247;&#x5220;&#x9664;&#x6210;&#x529F;&#x7684;&#x94A9;&#x5B50;</p>
+<p><strong>&#x7528;&#x4F8B;&#xFF1A;</strong></p>
+</blockquote>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">upload-file</span> <span class="hljs-attr">:isImage</span>=<span class="hljs-string">&quot;true&quot;</span> <span class="hljs-attr">files</span>=<span class="hljs-string">&quot;files&quot;</span> @<span class="hljs-attr">on-success</span>=<span class="hljs-string">&quot;uploadSuccess&quot;</span> @<span class="hljs-attr">on-delete</span>=<span class="hljs-string">&quot;deleteFile&quot;</span> /&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">template</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="javascript">
+  <span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> {},
+  methods:{
+    data(){
+      <span class="hljs-keyword">return</span> {
+        <span class="hljs-comment">// &#x7236;&#x9875;&#x9762;&#x5904;&#x7406;&#x56FE;&#x7247; &#x6570;&#x7EC4;&#x6216;&#x8005;&#x5BF9;&#x8C61;</span>
+        files:[]
+      }
+    },
+    methods:{
+      uploadSuccess(){},
+      deleteFile(){},
+    }
+  }
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
 </code></pre>
 
                                 
@@ -390,7 +433,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"公共组件","level":"1.4","depth":1,"next":{"title":"路由设置","level":"1.5","depth":1,"path":"ROUTER.md","ref":"ROUTER.md","articles":[]},"previous":{"title":"公共方法","level":"1.3","depth":1,"path":"COMMONJS.md","ref":"COMMONJS.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"COMPONENTS.md","mtime":"2019-07-31T01:38:47.805Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-07-31T01:39:08.402Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"公共组件","level":"1.4","depth":1,"next":{"title":"路由设置","level":"1.5","depth":1,"path":"ROUTER.md","ref":"ROUTER.md","articles":[]},"previous":{"title":"公共方法","level":"1.3","depth":1,"path":"COMMONJS.md","ref":"COMMONJS.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"COMPONENTS.md","mtime":"2019-08-01T05:59:41.090Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-08-01T06:00:32.739Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>

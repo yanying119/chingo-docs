@@ -2,7 +2,7 @@
 
 ### 目录位置（src/components/common）
 
-#### 一、高德地图
+#### 一、高德地图 Map
 
 > 功能：引入高德地图
 
@@ -20,16 +20,16 @@
   import Map from '../common/map.vue';
   export default {
     components:{Map},
-  },
-  methods:{
-    setCoordinate(lng, lat){
-      console.log(lng, lat)
+    methods:{
+      setCoordinate(lng, lat){
+        console.log(lng, lat)
+      }
     }
   }
 </script>
 ```
 
-#### 二、百度编辑器
+#### 二、百度编辑器 UE
 
 > 功能：引入高德地图
 
@@ -123,7 +123,7 @@
 </script>
 ```
 
-#### 五、列表搜索框组件
+#### 五、列表搜索框组件 Seacher
 
 > 功能：用于列表搜索条件太多时，可以点击展开搜索条件。
 
@@ -166,6 +166,60 @@
       setShow(bool){
         this.show = bool
       }
+    }
+  }
+</script>
+```
+
+#### 六、权限点按钮 list-button
+
+> 功能：用于放置带有权限判断的操作按钮或者链接。
+
+> props：rule [String]对应的权限点 routeName，usable[Boolean] 是可用状态 还是禁用状态 true or false，to 链接地址同 router-link 的属性 to
+
+> slot : 标签之间的内容 操作是显示按钮还是链接 或者一句话（合法的 html）
+
+> 事件 : on-click 点击事件 有 to 的情况先执行 to 跳转
+
+> **用例：**
+
+```html
+<template>
+  <!-- 操作链接 -->
+  <list-button rule="xxx" :usable="a==b" :to="{name:'xxx'}">名称</list-button>
+  <!-- 操作按钮 -->
+  <list-button rule="xxx" :usable="a==b" @on-click="doSomething">
+    <button type="primary">按钮名称</button>
+  </list-button>
+</template>
+```
+
+#### 上传文件 upload-file
+
+> 功能：用于上传文件或者图片
+
+> props：files[Array,Object] 要上传的文件，isImage[Boolean] true 上传图片 false 上传文件
+
+> 事件 : on-success 文件上传成功的钩子，on-delete 图片删除成功的钩子
+
+> **用例：**
+
+```html
+<template>
+  <upload-file :isImage="true" files="files" @on-success="uploadSuccess" @on-delete="deleteFile" />
+</template>
+<script>
+  export default {},
+  methods:{
+    data(){
+      return {
+        // 父页面处理图片 数组或者对象
+        files:[]
+      }
+    },
+    methods:{
+      uploadSuccess(){},
+      deleteFile(){},
     }
   }
 </script>
