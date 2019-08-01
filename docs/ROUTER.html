@@ -211,20 +211,27 @@
       }
     },
     {
-      path: &apos;/new&apos;,     // &#x8DEF;&#x7531;&#x8BBF;&#x95EE;path
-      name: &apos;Index&apos;,    // &#x8DEF;&#x7531;&#x540D;&#x79F0; &#x552F;&#x4E00;&#x6027;  &#x83DC;&#x5355;&#x6743;&#x9650;&#x914D;&#x7F6E;&#x91CC;&#x9762;&#x524D;&#x7AEF;&#x8DEF;&#x7531;&#x540D;&#x79F0;&#x5C31;&#x662F;&#x8FD9;&#x4E2A;&#x5B57;&#x6BB5;
-      component: () =&gt; import(&apos;@/components/new.vue&apos;),   // &#x5BF9;&#x5E94;&#x7684;.vue&#x6587;&#x4EF6;
-      meta: {              // &#x4E00;&#x4E9B;&#x5176;&#x4ED6;&#x7684;&#x4FE1;&#x606F;
-        title: &apos;&#x65B0;&#x8DEF;&#x7531;&apos;,   // &#x8DEF;&#x7531;&#x663E;&#x793A;&#x5728;&#x7F51;&#x9875;title&#x4E0A;&#x7684;&#x540D;&#x79F0;&#x4EE5;&#x53CA;&#x9762;&#x5305;&#x5C51;&#x7684;&#x540D;&#x79F0;
-        noCheckRule: true,  //&#x4E0D;&#x68C0;&#x67E5;&#x9875;&#x9762;&#x6743;&#x9650;&#x7684;&#x9875;&#x9762;
-        fullScreen: true,   //&#x6CA1;&#x6709;&#x5934;&#x90E8;&#x5DE6;&#x4FA7;&#x83DC;&#x5355;&#x7684;&#x9875;&#x9762;
-        noLogin:true,   //&#x4E0D;&#x9700;&#x8981;&#x767B;&#x5F55;&#x7684;&#x9875;&#x9762;
-        breadcrumb: [   // &#x5982;&#x679C;&#x6B64;&#x8DEF;&#x7531;&#x4E0D;&#x5728;&#x5DE6;&#x4FA7;&#x83DC;&#x5355;&#x4E0A; &#x4F46;&#x662F;&#x53C8;&#x8981;&#x9AD8;&#x4EAE;&#x4E00;&#x4E2A;&#x83DC;&#x5355; &#x914D;&#x7F6E;&#x6B64;&#x9009;&#x9879;&#xFF0C;&#x8FD9;&#x79CD;&#x60C5;&#x51B5;&#x8FDB;&#x5165;&#x8FD9;&#x4E2A;&#x8DEF;&#x7531;&#xFF0C;&#x5DE6;&#x4FA7;&#x7528;&#x6237;&#x7BA1;&#x7406;&#x83DC;&#x5355;&#x9AD8;&#x4EAE;
-          {
-            name: &apos;&#x7528;&#x6237;&#x7BA1;&#x7406;&apos;,
-            url: &apos;/user&apos;
-          }
-        ]
+      // &#x8DEF;&#x7531;&#x8BBF;&#x95EE;path
+      path: &apos;/new&apos;,
+      // &#x8DEF;&#x7531;&#x540D;&#x79F0; &#x552F;&#x4E00;&#x6027;  &#x83DC;&#x5355;&#x6743;&#x9650;&#x914D;&#x7F6E;&#x91CC;&#x9762;&#x524D;&#x7AEF;&#x8DEF;&#x7531;&#x540D;&#x79F0;&#x5C31;&#x662F;&#x8FD9;&#x4E2A;&#x5B57;&#x6BB5;
+      name: &apos;Index&apos;,
+      // &#x5BF9;&#x5E94;&#x7684;.vue&#x6587;&#x4EF6;
+      component: () =&gt; import(&apos;@/components/new.vue&apos;),
+      // &#x4E00;&#x4E9B;&#x5176;&#x4ED6;&#x7684;&#x4FE1;&#x606F;
+      meta: {
+        // &#x8DEF;&#x7531;&#x663E;&#x793A;&#x5728;&#x7F51;&#x9875;title&#x4E0A;&#x7684;&#x540D;&#x79F0;&#x4EE5;&#x53CA;&#x9762;&#x5305;&#x5C51;&#x7684;&#x540D;&#x79F0;
+        title: &apos;&#x65B0;&#x8DEF;&#x7531;&apos;,
+        // &#x4E0D;&#x68C0;&#x67E5;&#x9875;&#x9762;&#x6743;&#x9650;&#x7684;&#x9875;&#x9762;
+        noCheckRule: true,
+        // &#x6CA1;&#x6709;&#x5934;&#x90E8;&#x5DE6;&#x4FA7;&#x83DC;&#x5355;&#x7684;&#x9875;&#x9762;
+        fullScreen: true,
+        // &#x4E0D;&#x9700;&#x8981;&#x767B;&#x5F55;&#x7684;&#x9875;&#x9762;
+        noLogin:true,
+        // &#x5982;&#x679C;&#x6B64;&#x8DEF;&#x7531;&#x4E0D;&#x5728;&#x5DE6;&#x4FA7;&#x83DC;&#x5355;&#x4E0A; &#x4F46;&#x662F;&#x53C8;&#x8981;&#x9AD8;&#x4EAE;&#x4E00;&#x4E2A;&#x83DC;&#x5355; &#x914D;&#x7F6E;&#x6B64;&#x9009;&#x9879;&#xFF0C;&#x8FD9;&#x79CD;&#x60C5;&#x51B5;&#x8FDB;&#x5165;&#x8FD9;&#x4E2A;&#x8DEF;&#x7531;&#xFF0C;&#x5DE6;&#x4FA7;&#x7528;&#x6237;&#x7BA1;&#x7406;&#x83DC;&#x5355;&#x9AD8;&#x4EAE;
+        breadcrumb: {
+          name: &apos;&#x7528;&#x6237;&#x7BA1;&#x7406;&apos;,
+          url: &apos;/user&apos;
+        }
       }
     }
   ]
@@ -268,7 +275,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"路由设置","level":"1.5","depth":1,"previous":{"title":"公共组件","level":"1.4","depth":1,"path":"COMPONENTS.md","ref":"COMPONENTS.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"ROUTER.md","mtime":"2019-07-10T07:37:40.091Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-08-01T07:17:07.052Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"路由设置","level":"1.5","depth":1,"previous":{"title":"公共组件","level":"1.4","depth":1,"path":"COMPONENTS.md","ref":"COMPONENTS.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"ROUTER.md","mtime":"2019-08-01T07:22:32.994Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-08-01T07:24:05.340Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>
