@@ -15,7 +15,7 @@
 
 ```bash
 # download
-git clone https://git.crigh.net/vueApp/vue-template.git
+git clone https://git.chingo.net/vueApp/vue-template.git
 # 安装依赖
 npm install
 # 本地服务器运动地址 http://localhost:8081

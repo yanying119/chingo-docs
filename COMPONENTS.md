@@ -31,7 +31,7 @@
 
 #### 二、百度编辑器 UE
 
-> 功能：引入高德地图
+> 功能：引入百度 ueditor 编辑器
 
 > props：element-id 编辑器的 id(非)， content 编辑器内容(必填)， ueConfig 编辑器配置(非)
 
