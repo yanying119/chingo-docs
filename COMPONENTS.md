@@ -127,8 +127,6 @@
 
 > 功能：用于列表搜索条件太多时，可以点击展开搜索条件。
 
-> props：show true or false， setShow 父级控制搜索框显示隐藏的事件
-
 > slot : left 显示在控制按钮左侧的内容，right 显示最右侧的内容
 
 > **用例：**
@@ -138,7 +136,7 @@
 <Layout>
   <Content>
     <Card>
-      <Search :show="show" :setShow="setShow">
+      <Search>
         <Button slot="left">显示在左边</Button>
         <Button slot="right">显示在右边</Button>
         <!--这里填写其他的搜索条件-->
