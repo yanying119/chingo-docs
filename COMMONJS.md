@@ -328,3 +328,19 @@ const havaLogin = this.commonMethods.antiShake((query) => {
 // 当输入框的值改变时  多次触发 只会执行最后一次
 <input @change="havaLogin" />
 ```
+
+### 二十一、connectObject
+
+> 功能：合并对象
+
+> 参数：originObj 目标对象 newObj 需要合并到目标对象的对象
+
+> 返回值：undefined
+
+**用例：**
+
+```javascript
+// 把搜索条件合并到data this.search中的有效值会合并到data
+const data = {};
+this.commonMethods.connectObject(data, this.search);
+```

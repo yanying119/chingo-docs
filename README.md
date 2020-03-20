@@ -24,6 +24,13 @@ npm run dev
 npm run build--prod
 # 自动化测试模式打包
 npm run build--test
+
+### 新项目本地运行介绍
+# 本地运行
+npm run serve
+
+# 打包学校xxxx代表学校代码
+npm run build--xxxx
 ```
 
 ## 二、[项目目录介绍](CATALOG.html)

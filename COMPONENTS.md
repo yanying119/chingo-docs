@@ -192,7 +192,7 @@
 </template>
 ```
 
-#### 上传文件 upload-file
+#### 七、上传文件 upload-file
 
 > 功能：用于上传文件或者图片
 
@@ -218,6 +218,35 @@
     methods:{
       uploadSuccess(){},
       deleteFile(){},
+    }
+  }
+</script>
+```
+
+#### 八、列表删除按钮组件
+
+> 功能：用于列表删除按钮，会弹出一个提示下拉，有确定 取消两个按钮
+
+> props：title 可选 提示内容 rule 可选 按钮的权限点
+
+> 事件 : on-ok 点击确定，on-delete 点击取消
+
+> **用例：**
+
+```html
+<template>
+  <del-btn title="是否删除内容？" rule="xxxDel" @on-ok="del(item)">删除</del-btn>
+</template>
+<script>
+  export default {},
+  methods:{
+    data(){
+      return {
+
+      }
+    },
+    methods:{
+      del(){},
     }
   }
 </script>
